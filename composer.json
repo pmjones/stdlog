@@ -1,0 +1,34 @@
+{
+    "name": "pmjones/stdlog",
+    "type": "library",
+    "description": "Log output to STDOUT and STDERR.",
+    "keywords": ["psr", "log", "stdout", "stderr", "console"],
+    "homepage": "https://github.com/pmjones/stdlog",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Stdlog Contributors",
+            "homepage": "https://github.com/pmjones/stdlog/contributors"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "psr/log": "^3.0"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^1.10",
+        "phpunit/phpunit": "^9.0",
+        "pds/skeleton": "^1.0",
+        "pds/composer-script-names": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "pmjones\\Stdlog\\": "src/"
+        }
+    },
+    "scripts": {
+        "analyze": "./vendor/bin/phpstan analyze -c phpstan.neon",
+        "check": "composer test && composer analyze",
+        "test": "./vendor/bin/phpunit"
+    }
+}
