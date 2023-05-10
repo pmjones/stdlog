@@ -23,8 +23,8 @@ $log->error('Other world!');
 use pmjones\Stdlog\Stdlog;
 
 $log = new Stdlog(
-	stdout: fopen('php://memory', 'w'),
-	stderr: fopen('php://memory', 'w')
+    stdout: fopen('php://memory', 'w'),
+    stderr: fopen('php://memory', 'w')
 );
 
 // info level logs to STDOUT
